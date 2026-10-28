@@ -574,3 +574,11 @@ html { scrollbar-color: var(--muted) var(--bg); }
   .conclusion-halo p { font-size: clamp(1.0625rem, 0.6rem + 2.2vw, 1.5rem); }
   .conclusion-next { padding: 22px 20px; }
 }
+
+/* Phones: the dish sits under the copy in normal flow, so it can never climb over the text */
+@media (max-width: 860px) {
+  .hero { display: flex; flex-direction: column; min-height: 0; }
+  .hero-dish { order: 2; flex: none; }
+  .hero-dish { position: relative; left: auto; top: auto; bottom: auto; width: 130vw; height: 130vw; margin: 40px 0 -72vw -15vw; }
+  .hero-copy { padding-bottom: 0; }
+}
